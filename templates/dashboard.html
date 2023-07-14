@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<form  action="/dashboard" method="post" style="margin:100px 42px 0px 350px">
+    <input class="todo-input"  name='todo-input' type="text"><button class="todo-btn">Add</button>
+</form>
+    
+<table class="table" style="margin:100px 42px 0px 350px";>
+    <thead >
+        <tr class="tr">
+            <th class="th" scope="col">#</th>
+            <th class="th" scope="col">Title</th>
+            <th class="th" scope="col">Delete</th>
+            <th class="th" scope="col">Update</th>
+        </tr>
+    </thead>
+   
+    {% for todo in todos %}
+        
+    <tbody >
+        <tr class="tr">
+            <th class="th" scope="row">{{loop.index}}</th>
+            <td class="th">{{todo.title}}</td>
+            <td class="th"><a href="/delete/{{todo.sno}}"><button>Delete</button></a></td>
+            <td class="th"><a href="/update/{{todo.sno}}"><button>Update</button></a></td>
+        </tr>
+        <!-- <span class="n"></span> -->
+        
+        
+    </tbody>
+    {% endfor %}
+</table>
+
+<form action="/logout" method="post" style="margin:100px 42px 0px 350px">
+    
+    <button class="logout">Logout</button>
+</form>
+    
+{% endblock body %}

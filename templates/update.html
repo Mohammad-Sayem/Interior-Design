@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<form  action="/update/{{todo.sno}}" method="post" style="margin:100px 42px 0px 350px">
+    <input class="todo-input"  name='todo-input' type="text" value="{{todo.title}}"><button class="todo-btn">Add</button>
+</form>
+    
+
+
+    
+{% endblock body %}

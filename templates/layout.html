@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interior design</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+   
+</head>
+
+<body>
+
+    <nav class="navbar1">
+        <div class="hamburger">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+        </div>
+       
+
+    </nav>
+
+
+    <!-- navbar section  starts -->
+    <nav class="navbar">
+     
+
+        <div>
+            <h2>Beats <br> Company</h2>
+        </div>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="">Showcase</a>
+            <a href="">Services</a>
+            <a href="">Designers</a>
+            <a href="">Packages</a>
+            <a href="/contact">Contacts</a>
+            <a href="/login">Login</a>
+        </div>
+    </nav>
+    </div>
+    <!-- navbar section  endss -->
+   
+    <div class="col_2">
+
+        {% block body %}
+        
+        {% endblock body %}
+
+    </div>
+
+    
+     <!-- footer start  -->
+     <footer class="footer">
+         <h4>Powered by Mirza creation <br>&copy; Since 1999</h4>
+     </footer>
+
+
+ 
+    
+ <script src="{{url_for('static',filename='app.js')}}"></script>
+
+</body>
+
+
+</html>

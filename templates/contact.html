@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <!-- contact start  -->
+                
+    <section class="contact">
+        <h2>Contact</h2>
+        <div class="line"></div>
+        <div>
+            <p>contact me for any reason and problem.i have to solve your problem for some days.ok thank you.</p>
+        </div>
+        <form action="/contact" method="POST" class="form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message"><br><br>
+            <button>Submit</button>
+            
+            
+        </form>
+    </section>
+    <!-- contact end  -->
+{% endblock body %}
